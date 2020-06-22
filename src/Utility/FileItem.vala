@@ -1287,7 +1287,7 @@ public class FileItem : GLib.Object, Gee.Comparable<FileItem> {
 			}
 
 			// modified
-			this.modified = (new DateTime.from_timeval_utc(info.get_modification_time())).to_local();
+			this.modified = (new DateTime.from_unix_utc(info.get_modification_time().tv_sec)).to_local();
 
 			if (info.has_attribute(FileAttribute.TIME_ACCESS)){
 				var time = (int64) info.get_attribute_uint64(FileAttribute.TIME_ACCESS); // convert uint64 to int64

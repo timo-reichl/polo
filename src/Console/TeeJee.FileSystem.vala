@@ -377,7 +377,7 @@ namespace TeeJee.FileSystem{
 			File file = File.parse_name (file_path);
 			if (file.query_exists()) {
 				info = file.query_info("%s".printf(FileAttribute.TIME_MODIFIED), 0);
-				return (new DateTime.from_timeval_utc(info.get_modification_time())).to_local();
+				return (new DateTime.from_unix_utc(info.get_modification_time().tv_sec)).to_local();
 			}
 		}
 		catch (Error e) {

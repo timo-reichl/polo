@@ -953,7 +953,7 @@ public class ArchiveTask : AsyncTask {
 						FileAttribute.STANDARD_SIZE, FileAttribute.TIME_MODIFIED), 0);
 
 					archive.archive_size = finfo.get_size();
-					archive.archive_modified = (new DateTime.from_timeval_utc(finfo.get_modification_time())).to_local();
+					archive.archive_modified = (new DateTime.from_unix_utc(finfo.get_modification_time().tv_sec)).to_local();
 				}
 				catch (Error e) {
 					log_error(e.message);
