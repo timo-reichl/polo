@@ -634,7 +634,7 @@ public abstract class MediaStream : GLib.Object{
     public string Description = "";
 	public bool IsSelected = true;
 	
-	public MediaStream(MediaStreamType _type){
+	protected MediaStream(MediaStreamType _type){
 		Type = _type;
 	}
 	
