@@ -69,7 +69,7 @@ public class TrashCan : FileItem {
 
 		try {
 			thread_running = true;
-			Thread.create<void> (query_items_thread, true);
+			new Thread<void> ("TrashCan::query_items_thread", query_items_thread);
 		} catch (ThreadError e) {
 			thread_running = false;
 			log_error (e.message);

@@ -203,7 +203,7 @@ public class CreateArchiveWindow : Gtk.Dialog {
 
 		try {
 			add_files_thread_is_running = true;
-			Thread.create<void> (add_files_thread, true);
+			new Thread<void> ("CreateArchiveWindow::add_files_thread", add_files_thread);
 		} catch (ThreadError e) {
 			add_files_thread_is_running = false;
 			log_error (e.message);
@@ -2354,7 +2354,7 @@ public class CreateArchiveWindow : Gtk.Dialog {
 			log_msg("waiting for thread to exit: query_children()");
 			
 			try {
-				Thread.create<void> (wait_for_add_files_thread, true);
+				new Thread<void> ("CreateArchiveWindow::wait_for_add_files_thread", wait_for_add_files_thread);
 			}
 			catch (ThreadError e) {
 				log_error (e.message);

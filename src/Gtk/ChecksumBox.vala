@@ -833,7 +833,7 @@ public class ChecksumBox : Gtk.Box {
 		refresh(); // create empty store
 
 		try {
-			Thread.create<void> (enumerate_source_items_thread, true);
+			new Thread<void>.try("ChecksumBox::enumerate_source_items_thread", enumerate_source_items_thread);
 		}
 		catch (Error e) {
 			log_error("ChecksumBox: enumerate_source_items_thread()");
@@ -1238,7 +1238,7 @@ public class ChecksumBox : Gtk.Box {
 		refresh(); // create empty store
 		
 		try {
-			Thread.create<void> (enumerate_from_hash_file_thread, true);
+			new Thread<void>.try("ChecksumBox::enumerate_from_hash_file_thread", enumerate_from_hash_file_thread);
 		}
 		catch (Error e) {
 			log_error("ChecksumBox: enumerate_source_items_thread()");

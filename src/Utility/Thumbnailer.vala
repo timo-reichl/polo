@@ -306,7 +306,7 @@ public class Thumbnailer : GLib.Object {
 
 		try {
 			//start thread for thumbnail generation
-			Thread.create<void> (thumbnail_generator_thread, true);
+			new Thread<void> ("Thumbnailer::thumbnail_generator_thread", thumbnail_generator_thread);
 		}
 		catch (Error e) {
 			log_error ("Thumbnailer: start_thumbnail_generator()");

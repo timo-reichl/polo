@@ -1498,7 +1498,7 @@ public class FileItem : GLib.Object, Gee.Comparable<FileItem> {
 
 		try {
 			//start thread
-			Thread.create<void> (query_children_async_thread, true);
+			new Thread<void> ("FileItem::query_children_async_thread", query_children_async_thread);
 		}
 		catch (Error e) {
 			log_error ("FileItem: query_children_async(): error");
