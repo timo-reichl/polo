@@ -449,8 +449,8 @@ public class Statusbar : Gtk.Box {
 
 		var img = IconManager.lookup_image("terminal-symbolic",16);
 		img.set_tooltip_text(_("Toggle terminal panel"));
-		//img.margin_left = 6;
-		//img.margin_right = 6;
+		//img.margin_start = 6;
+		//img.margin_end = 6;
 
 		var ebox = new Gtk.EventBox();
 		ebox.add(img);
@@ -471,8 +471,8 @@ public class Statusbar : Gtk.Box {
 
 		var img = IconManager.lookup_image("document-properties",16);
 		img.set_tooltip_text(_("Toggle file properties panel"));
-		//img.margin_left = 6;
-		//img.margin_right = 6;
+		//img.margin_start = 6;
+		//img.margin_end = 6;
 
 		var ebox = new Gtk.EventBox();
 		ebox.add(img);
@@ -493,8 +493,8 @@ public class Statusbar : Gtk.Box {
 
 		var img = IconManager.lookup_image("view-filter",16);
 		img.set_tooltip_text(_("Filter Items"));
-		//img.margin_left = 6;
-		//img.margin_right = 6;
+		//img.margin_start = 6;
+		//img.margin_end = 6;
 
 		var ebox = new Gtk.EventBox();
 		ebox.add(img);

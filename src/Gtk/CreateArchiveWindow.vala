@@ -124,7 +124,7 @@ public class CreateArchiveWindow : Gtk.Dialog {
 		// vbox_main
 		var vbox_content = get_content_area();
 		vbox_content.margin = 12;
-		vbox_content.margin_right = 24;
+		vbox_content.margin_end = 24;
 		vbox_content.spacing = 6;
 		//vbox_content.set_size_request(250,-1);
 

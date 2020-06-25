@@ -3324,7 +3324,7 @@ public class FileViewList : Gtk.Box, IFileViewList {
 		}
 
 		var hbox = new Gtk.Box(Orientation.HORIZONTAL, 6);
-		hbox.margin_left = 24;
+		hbox.margin_start = 24;
 		hbox.margin_top = 48;
 		box_overlay = hbox;
 		

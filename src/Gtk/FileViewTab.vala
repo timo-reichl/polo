@@ -220,7 +220,7 @@ public class FileViewTab : Gtk.Box {
 		
 		var img = IconManager.lookup_image("tab-close", 16, false, true);
 		var ebox = new Gtk.EventBox();
-		//ebox.margin_left = 10;
+		//ebox.margin_start = 10;
 		ebox.add(img);
 		box.add(ebox);
 		ebox_close = ebox;
@@ -260,7 +260,7 @@ public class FileViewTab : Gtk.Box {
 		
 		var lbl = new Gtk.Label(_("Edit Name"));
 		lbl.xalign = 0.0f;
-		lbl.margin_right = 6;
+		lbl.margin_end = 6;
 		menu_item.add(lbl);
 
 		menu_item.activate.connect (() => {
@@ -278,7 +278,7 @@ public class FileViewTab : Gtk.Box {
 		
 		lbl = new Gtk.Label(_("Reset Name"));
 		lbl.xalign = 0.0f;
-		lbl.margin_right = 6;
+		lbl.margin_end = 6;
 		lbl.sensitive = renamed;
 		menu_item.add(lbl);
 
@@ -296,7 +296,7 @@ public class FileViewTab : Gtk.Box {
 		
 		lbl = new Gtk.Label(_("Lock Path"));
 		lbl.xalign = 0.0f;
-		lbl.margin_right = 6;
+		lbl.margin_end = 6;
 		lbl.sensitive = true;
 		menu_item.add(lbl);
 
@@ -311,7 +311,7 @@ public class FileViewTab : Gtk.Box {
 		
 		lbl = new Gtk.Label(_("Unlock Path"));
 		lbl.xalign = 0.0f;
-		lbl.margin_right = 6;
+		lbl.margin_end = 6;
 		lbl.sensitive = (locked_path.length > 0);
 		menu_item.add(lbl);
 
@@ -328,7 +328,7 @@ public class FileViewTab : Gtk.Box {
 		
 		lbl = new Gtk.Label(_("Close"));
 		lbl.xalign = 0.0f;
-		lbl.margin_right = 6;
+		lbl.margin_end = 6;
 		menu_item.add(lbl);
 
 		menu_item.activate.connect (() => {

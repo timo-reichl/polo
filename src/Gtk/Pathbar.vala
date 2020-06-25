@@ -193,8 +193,8 @@ public class Pathbar : Gtk.Box {
 
 		var ebox = gtk_add_event_box(box);
 		//ebox.margin = 1;
-		//ebox.margin_left = 6;
-		//ebox.margin_right = 6;
+		//ebox.margin_start = 6;
+		//ebox.margin_end = 6;
 		ebox_disk = ebox;
 
 		var img = IconManager.lookup_image("drive-harddisk-symbolic",16);
@@ -392,11 +392,11 @@ public class Pathbar : Gtk.Box {
 
 		if (App.pathbar_show_disks){
 			gtk_show(ebox_disk);
-			link_box.margin_left = 0;
+			link_box.margin_start = 0;
 		}
 		else{
 			gtk_hide(ebox_disk);
-			link_box.margin_left = 6;
+			link_box.margin_start = 6;
 		}
 
 		// back ---------------
@@ -472,25 +472,25 @@ public class Pathbar : Gtk.Box {
 		// margins ----------------------------
 
 		if (App.pathbar_show_other){
-			ebox_open_other.margin_left = 3;
+			ebox_open_other.margin_start = 3;
 		}
 
 		if (App.pathbar_show_swap){
-			ebox_swap.margin_right = 3;
+			ebox_swap.margin_end = 3;
 		}
 
 		if (!App.pathbar_show_swap){
-			ebox_open_other.margin_right = 3;
+			ebox_open_other.margin_end = 3;
 		}
 		else{
-			ebox_open_other.margin_right = 0;
+			ebox_open_other.margin_end = 0;
 		}
 
 		if (!App.pathbar_show_other){
-			ebox_swap.margin_left = 3;
+			ebox_swap.margin_start = 3;
 		}
 		else{
-			ebox_swap.margin_left = 0;
+			ebox_swap.margin_start = 0;
 		}
 
 
@@ -766,7 +766,7 @@ public class Pathbar : Gtk.Box {
 		
 		var label = new Gtk.Label(text);
 		label.margin = 0;
-		label.margin_left = label.margin_right = 0;
+		label.margin_start = label.margin_end = 0;
 		button.add(label);
 
 		if ((App.pathbar_style == PathbarStyle.FLAT_BUTTONS) && !is_first_part){
@@ -929,8 +929,8 @@ public class Pathbar : Gtk.Box {
 		log_debug("Pathbar: add_item_open_other()");
 
 		var ebox = gtk_add_event_box(this);
-		ebox.margin_left = 3;
-		ebox.margin_right = 0;
+		ebox.margin_start = 3;
+		ebox.margin_end = 0;
 		ebox_open_other = ebox;
 
 		var img = IconManager.lookup_image("go-next-symbolic", 16);
@@ -953,8 +953,8 @@ public class Pathbar : Gtk.Box {
 		log_debug("Pathbar: add_item_swap()");
 
 		var ebox = gtk_add_event_box(this);
-		ebox.margin_left = 0;
-		ebox.margin_right = 3;
+		ebox.margin_start = 0;
+		ebox.margin_end = 3;
 		ebox_swap = ebox;
 
 		var img = IconManager.lookup_image("switch", 16);
@@ -977,8 +977,8 @@ public class Pathbar : Gtk.Box {
 		log_debug("Pathbar: add_item_eject()");
 
 		var ebox = gtk_add_event_box(this);
-		ebox.margin_left = 0;
-		//ebox.margin_right = 3;
+		ebox.margin_start = 0;
+		//ebox.margin_end = 3;
 		ebox_eject = ebox;
 
 		var img = IconManager.lookup_image("media-eject", 16);
@@ -1064,7 +1064,7 @@ public class Pathbar : Gtk.Box {
 		log_debug("Pathbar: add_item_close()");
 
 		var ebox = gtk_add_event_box(this);
-		ebox.margin_right = 3;
+		ebox.margin_end = 3;
 		ebox_close = ebox;
 
 		var img = IconManager.lookup_image("window-close", 16);

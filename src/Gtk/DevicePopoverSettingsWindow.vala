@@ -181,7 +181,7 @@ public class DevicePopoverSettingsWindow : Gtk.Window {
 		hbox = new Gtk.Box(Orientation.HORIZONTAL, 12);
 		box.add(hbox);
 
-		hbox.margin_left = 6;
+		hbox.margin_start = 6;
 
 		var label = new Gtk.Label(_("Width"));
 		label.xalign = 0.0f;
@@ -209,7 +209,7 @@ public class DevicePopoverSettingsWindow : Gtk.Window {
 		var hbox = new Gtk.Box(Orientation.HORIZONTAL, 12);
 		box.add(hbox);
 
-		hbox.margin_left = 6;
+		hbox.margin_start = 6;
 
 		var label = new Gtk.Label(_("Height"));
 		label.xalign = 0.0f;

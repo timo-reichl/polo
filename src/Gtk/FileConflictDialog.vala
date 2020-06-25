@@ -104,7 +104,7 @@ public class FileConflictDialog : Gtk.Dialog {
 		label.set_use_markup(true);
 		label.xalign = 0.0f;
 		label.margin_bottom = 12;
-		label.margin_left = 6;
+		label.margin_start = 6;
 		vbox_main.add(label);
 		lbl_file_count_message = label;
 

@@ -98,11 +98,11 @@ public class DevicesMenu : Gtk.Menu, IPaneActive {
 			}
 
 			if ((dev.type == "disk") || ((dev.type == "loop") && dev.has_children)){
-				img.margin_left = 0;
+				img.margin_start = 0;
 				box.remove(img);
 			}
 			else{
-				img.margin_left = 12;
+				img.margin_start = 12;
 
 			}
 
@@ -118,14 +118,14 @@ public class DevicesMenu : Gtk.Menu, IPaneActive {
 
 			var lbl = new Gtk.Label(name);
 			lbl.xalign = 0.0f;
-			lbl.margin_right = 6;
+			lbl.margin_end = 6;
 			box.add(lbl);
 
 			if ((dev.type == "disk") || ((dev.type == "loop") && dev.has_children)){
 				// skip
 			}
 			else{
-				//lbl.margin_left = 6;
+				//lbl.margin_start = 6;
 				sg_name.add_widget(lbl);
 			}
 
@@ -137,7 +137,7 @@ public class DevicesMenu : Gtk.Menu, IPaneActive {
 			else{
 				lbl = new Gtk.Label(dev.size_formatted);
 				lbl.xalign = 1.0f;
-				lbl.margin_right = 6;
+				lbl.margin_end = 6;
 				box.add(lbl);
 				sg_size.add_widget(lbl);
 			}
@@ -148,7 +148,7 @@ public class DevicesMenu : Gtk.Menu, IPaneActive {
 				var mp = dev.mount_points[0];
 				lbl = new Gtk.Label(mp.mount_point);
 				lbl.xalign = 0.0f;
-				lbl.margin_right = 6;
+				lbl.margin_end = 6;
 				box.add(lbl);
 				sg_mp.add_widget(lbl);
 			}

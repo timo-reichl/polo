@@ -871,7 +871,7 @@ public class FilePropertiesBox : Gtk.Box {
 	private void add_separator(Gtk.Box box){
 		
 		var separator = new Gtk.Separator(Gtk.Orientation.HORIZONTAL);
-		separator.margin_left = 12;
+		separator.margin_start = 12;
 		box.add(separator);
 	}
 }

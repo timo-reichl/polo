@@ -89,7 +89,7 @@ public class WizardWindow : Gtk.Window {
 		
 		var label = add_label_header(hbox, _("Select Layout Style"), true);
 		label.yalign = 0.5f;
-		label.margin_right = 12;
+		label.margin_end = 12;
 
 		var bbox = new Gtk.ButtonBox(Orientation.HORIZONTAL);
 		bbox.set_layout(Gtk.ButtonBoxStyle.EXPAND);

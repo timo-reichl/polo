@@ -506,7 +506,7 @@ public class ConnectServerWindow : Gtk.Window, IPaneActive {
 		label.xalign = 0.0f;
 		//label.hexpand = true;
 		label.margin = 6;
-		label.margin_left = 12;
+		label.margin_start = 12;
 		hbox.add(label);
 
 		css = " color: #ffffff; ";
@@ -518,7 +518,7 @@ public class ConnectServerWindow : Gtk.Window, IPaneActive {
 		label.xalign = 0.0f;
 		label.hexpand = true;
 		label.margin = 6;
-		label.margin_left = 0;
+		label.margin_start = 0;
 		hbox.add(label);
 		lbl_status = label;
 
@@ -539,7 +539,7 @@ public class ConnectServerWindow : Gtk.Window, IPaneActive {
 		//link.ellipsize = Pango.EllipsizeMode.MIDDLE;
 		label.set_use_markup(true);
 		label.margin = 6;
-		label.margin_right = 12;
+		label.margin_end = 12;
 		ebox.add(label);
 
 		var css = " color: #ffffff; ";
@@ -599,7 +599,7 @@ public class ConnectServerWindow : Gtk.Window, IPaneActive {
 		if (list.size == 0) { return; }
 		
 		var ebox = gtk_add_event_box(box);
-		ebox.margin_left = 6;
+		ebox.margin_start = 6;
 
 		var img = IconManager.lookup_image("preferences-system-symbolic", 16);
 		ebox.add(img);
@@ -624,7 +624,7 @@ public class ConnectServerWindow : Gtk.Window, IPaneActive {
 				
 				var lbl = new Gtk.Label(file_get_title(file_name));
 				lbl.xalign = 0.0f;
-				lbl.margin_right = 6;
+				lbl.margin_end = 6;
 				item.add(lbl);
 
 				item.activate.connect (() => {

@@ -234,7 +234,7 @@ public class MediaBar : Gtk.Box {
 		var label = new Gtk.Label(text);
 		label.set_use_markup(true);
 		label.margin = 6;
-		label.margin_right = 12;
+		label.margin_end = 12;
 		label.set_tooltip_text(_("Exit Media View"));
 		ebox.add(label);
 

@@ -242,7 +242,7 @@ public class AboutWindow : Dialog {
 		label.wrap_mode = Pango.WrapMode.WORD_CHAR;
 		label.use_markup = true;
 		label.margin = 6;
-		label.margin_right = 25;
+		label.margin_end = 25;
 		sw_license.add(label);
 		lbl_license = label;
 		

@@ -464,8 +464,8 @@ public class DevicePopover : Gtk.Popover {
 		vbox_main.add(hbox);
 
 		hbox.margin_top = 6;
-		hbox.margin_left = 6;
-		hbox.margin_right = 6;
+		hbox.margin_start = 6;
+		hbox.margin_end = 6;
 		hbox.margin_bottom = 6;
 
 		hbox.hexpand = true;

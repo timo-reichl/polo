@@ -149,7 +149,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		log_debug("Settings: init_tab_ui()");
 
 		var hbox = new Gtk.Box(Orientation.HORIZONTAL, 12);
-		hbox.margin_left = 6;
+		hbox.margin_start = 6;
 		stack.add_titled (hbox, _("UI"), _("UI"));
 
 		// new column ---------------------------------
@@ -197,7 +197,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		// new column ---------------------------------------
 
 		var separator = new Gtk.Separator(Gtk.Orientation.VERTICAL);
-		separator.margin_left = 12;
+		separator.margin_start = 12;
 		hbox.add(separator);
 		
 		vbox = new Gtk.Box(Gtk.Orientation.VERTICAL, 6);
@@ -230,7 +230,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		// new column  ---------------------------------
 
 		separator = new Gtk.Separator(Gtk.Orientation.VERTICAL);
-		separator.margin_left = 24;
+		separator.margin_start = 24;
 		hbox.add(separator);
 
 		vbox = new Gtk.Box(Gtk.Orientation.VERTICAL, 6);
@@ -702,7 +702,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		// label
 		var label = new Gtk.Label(_("Style") + ":");
 		label.xalign = 0.0f;
-		//label.margin_left = 6;
+		//label.margin_start = 6;
 		hbox.add(label);
 
 		var link = new Gtk.LinkButton(App.pathbar_style.to_string());
@@ -1156,8 +1156,8 @@ public class Settings : Gtk.Box, IPaneActive {
 		// label
 		/*var label = new Gtk.Label(_("GTK+ Theme"));
 		label.xalign = 0.0f;
-		label.margin_left = 6;
-		label.margin_right = 6;
+		label.margin_start = 6;
+		label.margin_end = 6;
 		label.margin_bottom = 6;
 		hbox.add(label);
 		sg_label.add_widget(label);*/
@@ -1218,7 +1218,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		log_debug("Settings: init_tab_general()");
 		
 		var box = new Gtk.Box(Orientation.HORIZONTAL, 24);
-		box.margin_left = 6;
+		box.margin_start = 6;
 		stack.add_titled (box, _("General"), _("General"));
 
 		// column 1 ---------------------------------
@@ -1297,8 +1297,8 @@ public class Settings : Gtk.Box, IPaneActive {
 		// label
 		var label = new Gtk.Label(_("View Mode"));
 		label.xalign = 0.0f;
-		label.margin_left = 6;
-		label.margin_right = 6;
+		label.margin_start = 6;
+		label.margin_end = 6;
 		label.margin_bottom = 6;
 		hbox.add(label);
 		sg_label.add_widget(label);
@@ -1366,8 +1366,8 @@ public class Settings : Gtk.Box, IPaneActive {
 		// label
 		var label = new Gtk.Label(_("Terminal"));
 		label.xalign = 0.0f;
-		label.margin_left = 6;
-		label.margin_right = 6;
+		label.margin_start = 6;
+		label.margin_end = 6;
 		label.margin_bottom = 6;
 		hbox.add(label);
 		sg_label.add_widget(label);
@@ -1421,8 +1421,8 @@ public class Settings : Gtk.Box, IPaneActive {
 		// label
 		var label = new Gtk.Label(_("File Manager"));
 		label.xalign = 0.0f;
-		label.margin_left = 6;
-		label.margin_right = 6;
+		label.margin_start = 6;
+		label.margin_end = 6;
 		label.margin_bottom = 6;
 		hbox.add(label);
 		sg_label.add_widget(label);
@@ -1617,7 +1617,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		log_debug("Settings: init_tab_view()");
 		
 		var box = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 12);
-		box.margin_left = 6;
+		box.margin_start = 6;
 		stack.add_titled (box, _("View"), _("View"));
 
 		var sg_label = new Gtk.SizeGroup(SizeGroupMode.HORIZONTAL);
@@ -1638,7 +1638,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		add_options_listview_icons(vbox);
 
 		var separator = new Gtk.Separator(Gtk.Orientation.VERTICAL);
-		separator.margin_left = 12;
+		separator.margin_start = 12;
 		box.add(separator);
 
 		// ------------------------
@@ -1656,7 +1656,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		add_options_iconview_icons(vbox);
 
 		separator = new Gtk.Separator(Gtk.Orientation.VERTICAL);
-		separator.margin_left = 12;
+		separator.margin_start = 12;
 		box.add(separator);
 
 		// ------------------------
@@ -1682,7 +1682,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		scale.value_pos = PositionType.RIGHT;
 		scale.set_size_request(200, -1);
 		scale.hexpand = false;
-		scale.margin_left = 6;
+		scale.margin_start = 6;
 		box.add(scale);
 
 		scale.adjustment.value = val;
@@ -1697,7 +1697,7 @@ public class Settings : Gtk.Box, IPaneActive {
 
 		var label = new Gtk.Label(_("Font scale"));
 		label.xalign = 0.0f;
-		//label.margin_left = 6;
+		//label.margin_start = 6;
 		hbox.add(label);
 		sg_label.add_widget(label);
 
@@ -1731,7 +1731,7 @@ public class Settings : Gtk.Box, IPaneActive {
 
 		var label = new Gtk.Label(_("Icon size"));
 		label.xalign = 0.0f;
-		//label.margin_left = 6;
+		//label.margin_start = 6;
 		hbox.add(label);
 		sg_label.add_widget(label);
 
@@ -1774,7 +1774,7 @@ public class Settings : Gtk.Box, IPaneActive {
 
 		var label = new Gtk.Label(_("Row spacing"));
 		label.xalign = 0.0f;
-		//label.margin_left = 6;
+		//label.margin_start = 6;
 		hbox.add(label);
 		sg_label.add_widget(label);
 
@@ -1886,7 +1886,7 @@ public class Settings : Gtk.Box, IPaneActive {
 
 		var label = new Gtk.Label(_("Icon size"));
 		label.xalign = 0.0f;
-		//label.margin_left = 6;
+		//label.margin_start = 6;
 		hbox.add(label);
 		sg_label.add_widget(label);
 
@@ -1924,7 +1924,7 @@ public class Settings : Gtk.Box, IPaneActive {
 
 		var label = new Gtk.Label(_("Row spacing"));
 		label.xalign = 0.0f;
-		//label.margin_left = 6;
+		//label.margin_start = 6;
 		hbox.add(label);
 		sg_label.add_widget(label);
 
@@ -1959,7 +1959,7 @@ public class Settings : Gtk.Box, IPaneActive {
 
 		var label = new Gtk.Label(_("Col spacing"));
 		label.xalign = 0.0f;
-		//label.margin_left = 6;
+		//label.margin_start = 6;
 		hbox.add(label);
 		sg_label.add_widget(label);
 
@@ -2087,7 +2087,7 @@ public class Settings : Gtk.Box, IPaneActive {
 
 		var label = new Gtk.Label(_("Icon size"));
 		label.xalign = 0.0f;
-		//label.margin_left = 6;
+		//label.margin_start = 6;
 		hbox.add(label);
 		sg_label.add_widget(label);
 
@@ -2125,7 +2125,7 @@ public class Settings : Gtk.Box, IPaneActive {
 
 		var label = new Gtk.Label(_("Row spacing"));
 		label.xalign = 0.0f;
-		//label.margin_left = 6;
+		//label.margin_start = 6;
 		hbox.add(label);
 		sg_label.add_widget(label);
 
@@ -2160,7 +2160,7 @@ public class Settings : Gtk.Box, IPaneActive {
 
 		var label = new Gtk.Label(_("Padding"));
 		label.xalign = 0.0f;
-		//label.margin_left = 6;
+		//label.margin_start = 6;
 		hbox.add(label);
 		sg_label.add_widget(label);
 
@@ -2294,7 +2294,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		
 		var box = new ColumnSelectionBox(parent_window, false);
 		box.refresh_list_view_columns();
-		box.margin_left = 6;
+		box.margin_start = 6;
 		
 		stack.add_titled (box, _("Columns"), _("Columns"));
 	}
@@ -2330,7 +2330,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		log_debug("Settings: init_tab_advanced()");
 		
 		var box = new Gtk.Box(Orientation.HORIZONTAL, 12);
-		box.margin_left = 6;
+		box.margin_start = 6;
 		stack.add_titled (box, _("Advanced"), _("Advanced"));
 
 		// column 1 ---------------------------------
@@ -2430,7 +2430,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		// label
 		var label = new Gtk.Label(_("CPU"));
 		label.xalign = 0.0f;
-		//label.margin_right = 12;
+		//label.margin_end = 12;
 		hbox.add(label);
 
 		// cmb_app
@@ -2482,7 +2482,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		// label
 		var label = new Gtk.Label(_("Graphics"));
 		label.xalign = 0.0f;
-		//label.margin_right = 12;
+		//label.margin_end = 12;
 		hbox.add(label);
 
 		// cmb_app
@@ -2531,7 +2531,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		
 		var label = new Gtk.Label(_("CPU Cores"));
 		label.xalign = 0.0f;
-		//label.margin_right = 12;
+		//label.margin_end = 12;
 		hbox.add(label);
 
 		var spin = new Gtk.SpinButton.with_range(1, 32, 1);
@@ -2586,7 +2586,7 @@ public class Settings : Gtk.Box, IPaneActive {
 
 		var label = new Gtk.Label(_("RAM (MB)"));
 		label.xalign = 0.0f;
-		label.margin_right = 12;
+		label.margin_end = 12;
 		hbox.add(label);
 
 		var spin = new Gtk.SpinButton.with_range(32, App.sysinfo.mem_total_mb, 100);
@@ -2938,12 +2938,12 @@ public class Settings : Gtk.Box, IPaneActive {
 
 		if (!first_column){
 			var separator = new Gtk.Separator(Gtk.Orientation.VERTICAL);
-			separator.margin_left = 12;
+			separator.margin_start = 12;
 			box.add(separator);
 		}
 		
 		var vbox = new Gtk.Box(Gtk.Orientation.VERTICAL, 12);
-		vbox.margin_right = 24;
+		vbox.margin_end = 24;
 		vbox.homogeneous = false;
 		box.add(vbox);
 

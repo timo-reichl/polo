@@ -97,7 +97,7 @@ public class SelectionBar : Gtk.Box {
 		add_close_button();
 
 		var separator = new Gtk.Separator(Gtk.Orientation.HORIZONTAL);
-		//separator.margin_left = 24;
+		//separator.margin_start = 24;
 		add(separator);
 	}
 

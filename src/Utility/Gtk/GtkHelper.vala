@@ -919,7 +919,7 @@ namespace TeeJee.GtkHelper{
 		// Entry
 		var entry = new Gtk.Entry();
 		entry.hexpand = true;
-		//entry.margin_left = 6;
+		//entry.margin_start = 6;
 		entry.secondary_icon_stock = "gtk-open";
 		entry.placeholder_text = _("Enter path or browse for directory");
 		box.add (entry);

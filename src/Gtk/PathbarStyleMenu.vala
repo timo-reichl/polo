@@ -135,7 +135,7 @@ public class PathbarStyleMenu : Gtk.Menu {
 		// label
 		var label = new Gtk.Label(text);
 		label.xalign = 0.0f;
-		//label.margin_right = 6;
+		//label.margin_end = 6;
 		box.add(label);
 		sg_label.add_widget(label);
 		

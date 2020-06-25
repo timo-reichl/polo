@@ -81,7 +81,7 @@ public class LoadingWindow : Gtk.Window {
 		// image ----------------
 		
 		var spinner = new Gtk.Spinner();
-		spinner.margin_right = 12;
+		spinner.margin_end = 12;
 		spinner.set_size_request(48,48);
 		hbox_contents.add(spinner);
 		spinner.start();

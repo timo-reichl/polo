@@ -135,7 +135,7 @@ public class Sidebar : Gtk.Box {
 			scrolled.set_shadow_type(ShadowType.ETCHED_IN);
 			scrolled.hscrollbar_policy = popup ? PolicyType.NEVER : PolicyType.AUTOMATIC;
 			scrolled.vscrollbar_policy = PolicyType.AUTOMATIC;
-			//scrolled.margin_right = 3;
+			//scrolled.margin_end = 3;
 			add(scrolled);
 
 			scrolled.add(listbox);
@@ -660,14 +660,14 @@ public class Sidebar : Gtk.Box {
 		box.add(image);
 
 		var vbox = new Gtk.Box(Orientation.VERTICAL, 0);
-		vbox.margin_right = 12;
+		vbox.margin_end = 12;
 		box.add(vbox);
 		//var label_box = vbox;
 
 		// name
 		var label = new Gtk.Label("");
 		label.xalign = 0.0f;
-		//label.margin_right = 3;
+		//label.margin_end = 3;
 		label.ellipsize = Pango.EllipsizeMode.END;
 		vbox.add(label);
 
@@ -682,7 +682,7 @@ public class Sidebar : Gtk.Box {
 
 		// -----------------------------------
 		
-		row.margin_left = 0;
+		row.margin_start = 0;
 		row.activatable = true;
 
 		label.label = "<b>%s</b>".printf(item.name);
@@ -695,7 +695,7 @@ public class Sidebar : Gtk.Box {
 
 		// label for right margin
 		var lbl = new Gtk.Label("");
-		lbl.margin_right = 12;
+		lbl.margin_end = 12;
 		box.add(lbl);
 	}
 	
@@ -749,7 +749,7 @@ public class Sidebar : Gtk.Box {
 		box.add(image);
 
 		var vbox = new Gtk.Box(Orientation.VERTICAL, 0);
-		vbox.margin_right = 12;
+		vbox.margin_end = 12;
 		box.add(vbox);
 		//var label_box = vbox;
 
@@ -763,7 +763,7 @@ public class Sidebar : Gtk.Box {
 		// -----------------------------------
 		
 		image.pixbuf = dev.get_icon();
-		image.margin_left = 12;
+		image.margin_start = 12;
 
 		label.label = item.name;
 		label.set_use_markup(true);
@@ -787,7 +787,7 @@ public class Sidebar : Gtk.Box {
 			lbl2.xalign = 1.0f;
 			lbl2.yalign = 1.0f;
 			lbl2.valign = Gtk.Align.END;
-			lbl2.margin_right = 6;
+			lbl2.margin_end = 6;
 			lbl2.sensitive = dev.is_mounted;
 			box.add(lbl2);
 			sg_size.add_widget(lbl2);
@@ -824,7 +824,7 @@ public class Sidebar : Gtk.Box {
 
 		// label for right margin
 		var lbl = new Gtk.Label("");
-		lbl.margin_right = 12;
+		lbl.margin_end = 12;
 		box.add(lbl);
 	}
 	
@@ -848,14 +848,14 @@ public class Sidebar : Gtk.Box {
 		box.add(image);
 
 		var vbox = new Gtk.Box(Orientation.VERTICAL, 0);
-		vbox.margin_right = 12;
+		vbox.margin_end = 12;
 		box.add(vbox);
 		//var label_box = vbox;
 
 		// name
 		var label = new Gtk.Label("");
 		label.xalign = 0.0f;
-		//label.margin_right = 3;
+		//label.margin_end = 3;
 		label.ellipsize = Pango.EllipsizeMode.END;
 		vbox.add(label);
 
@@ -872,13 +872,13 @@ public class Sidebar : Gtk.Box {
 		
 		var dev = item.device;
 			
-		row.margin_left = 0;
+		row.margin_start = 0;
 		row.activatable = true;
 
 		label.label = "<i>%s</i>".printf(item.name);
 		label.set_use_markup(true);
 
-		label.margin_left = 0;
+		label.margin_start = 0;
 		label.margin_top = 6;
 		label.margin_bottom = 6;
 
@@ -907,7 +907,7 @@ public class Sidebar : Gtk.Box {
 
 		// label for right margin
 		var lbl = new Gtk.Label("");
-		lbl.margin_right = 12;
+		lbl.margin_end = 12;
 		box.add(lbl);
 	}
 	
@@ -931,14 +931,14 @@ public class Sidebar : Gtk.Box {
 		box.add(image);
 
 		var vbox = new Gtk.Box(Orientation.VERTICAL, 0);
-		vbox.margin_right = 12;
+		vbox.margin_end = 12;
 		box.add(vbox);
 		var label_box = vbox;
 
 		// name
 		var label = new Gtk.Label("");
 		label.xalign = 0.0f;
-		//label.margin_right = 3;
+		//label.margin_end = 3;
 		label.ellipsize = Pango.EllipsizeMode.END;
 		vbox.add(label);
 
@@ -960,7 +960,7 @@ public class Sidebar : Gtk.Box {
 		row.set_tooltip_text(item.tooltip);
 
 		image.pixbuf = bm.get_icon();
-		image.margin_left = 12;
+		image.margin_start = 12;
 
 		bool exists = bm.exists();
 		if (!exists){
@@ -1038,7 +1038,7 @@ public class Sidebar : Gtk.Box {
 
 		// label for right margin
 		var lbl = new Gtk.Label("");
-		lbl.margin_right = 12;
+		lbl.margin_end = 12;
 		box.add(lbl);
 	}
 	
@@ -1062,14 +1062,14 @@ public class Sidebar : Gtk.Box {
 		box.add(image);
 
 		var vbox = new Gtk.Box(Orientation.VERTICAL, 0);
-		vbox.margin_right = 12;
+		vbox.margin_end = 12;
 		box.add(vbox);
 		//var label_box = vbox;
 
 		// name
 		var label = new Gtk.Label("");
 		label.xalign = 0.0f;
-		//label.margin_right = 3;
+		//label.margin_end = 3;
 		label.ellipsize = Pango.EllipsizeMode.END;
 		vbox.add(label);
 
@@ -1092,7 +1092,7 @@ public class Sidebar : Gtk.Box {
 			//row.selected = false;
 
 			image.pixbuf = IconManager.lookup("list-add-symbolic", 16, false);
-			image.margin_left = 12;
+			image.margin_start = 12;
 
 			label.label = item.name;
 			label.set_use_markup(false);
@@ -1131,7 +1131,7 @@ public class Sidebar : Gtk.Box {
 
 		// label for right margin
 		var lbl = new Gtk.Label("");
-		lbl.margin_right = 12;
+		lbl.margin_end = 12;
 		box.add(lbl);
 	}
 	
@@ -1170,7 +1170,7 @@ public class Sidebar : Gtk.Box {
 
 		var ebox = new Gtk.EventBox();
 		ebox.add(img);
-		ebox.margin_left = popup ? 24 : 0;
+		ebox.margin_start = popup ? 24 : 0;
 		box.add(ebox);
 
 		if (!popup){

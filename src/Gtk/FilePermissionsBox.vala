@@ -107,8 +107,8 @@ public class FilePermissionsBox : Gtk.Box {
 
 		if (!panel_mode){
 			grid.set_column_spacing(12);
-			grid.margin_left = 6;
-			grid.margin_right = 12;
+			grid.margin_start = 6;
+			grid.margin_end = 12;
 		}
 
 		label = new Gtk.Label(_("User"));
@@ -176,7 +176,7 @@ public class FilePermissionsBox : Gtk.Box {
 	private void add_option(Gtk.Grid grid, int col,  int row, string user, string mode_bit, string? text = null){
 
 		var chk = new Gtk.CheckButton.with_label(text);
-		//chk.margin_left = 6;
+		//chk.margin_start = 6;
 		grid.attach(chk, col, row, 1, 1);
 
 		chk.set_data<string>("user",user);
