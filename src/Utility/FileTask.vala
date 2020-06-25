@@ -368,6 +368,7 @@ public class FileTask : GLib.Object {
 		complete();
 	}
 
+	/*
 	private void rsync_copy_thread(){
 		
 		log_debug("FileTask: rsync_copy_thread(): start");
@@ -417,8 +418,8 @@ public class FileTask : GLib.Object {
 		Limitations:
 		* Rclone does not remove sub folders when moving
 		* No way to specify destination item name ?
-		*/
-	}
+		
+	}	*/
 
 	private void rclone_copy_thread(){
 		

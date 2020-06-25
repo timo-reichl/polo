@@ -567,7 +567,7 @@ public class FileViewList : Gtk.Box, IFileViewList {
 		treeview.row_collapsed.connect(treeview_row_collapsed);
 	}
 
-	private string propbar_last_folder_path = "";
+	//private string propbar_last_folder_path = "";
 	
 	private void on_selection_changed(){
 		

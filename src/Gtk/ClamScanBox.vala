@@ -38,7 +38,6 @@ public class ClamScanBox : Gtk.Box {
 	private Gtk.ScrolledWindow scrolled_treeview;
 	
 	private Gtk.ListStore store;
-	private Gtk.TreeModelFilter filter;
 
 	private Gtk.Button btn_quarantine;
 	private Gtk.Button btn_delete;
@@ -54,9 +53,6 @@ public class ClamScanBox : Gtk.Box {
 	
 	private bool scan_running = false;
 	private bool scan_cancelled = false;
-
-	private int64 count_ok = 0;
-	private int64 count_found = 0;
 
 	// parents
 	public FileViewTab tab;
@@ -257,7 +253,7 @@ public class ClamScanBox : Gtk.Box {
 			
 			if (clamav.admin_mode){
 				string std_out, std_err;
-				int status = App.exec_admin(cmd, out std_out, out std_err);
+				(void)App.exec_admin(cmd, out std_out, out std_err);
 			}
 			else{
 				Posix.system(cmd);
@@ -345,7 +341,7 @@ public class ClamScanBox : Gtk.Box {
 
 			if (clamav.admin_mode){
 				string std_out, std_err;
-				int status = App.exec_admin(cmd, out std_out, out std_err);
+				(void)App.exec_admin(cmd, out std_out, out std_err);
 			}
 			else{
 				Posix.system(cmd);
@@ -433,7 +429,7 @@ public class ClamScanBox : Gtk.Box {
 			
 			if (clamav.admin_mode){
 				string std_out, std_err;
-				int status = App.exec_admin(cmd, out std_out, out std_err);
+				(void)App.exec_admin(cmd, out std_out, out std_err);
 			}
 			else{
 				Posix.system(cmd);

@@ -35,16 +35,12 @@ using TeeJee.Misc;
 public class FilePreviewBox : Gtk.Box {
 
 	private FileItem file_item;
-	private MediaFile mfile;
 
 	private Gtk.Image image;
 
 	private Gtk.Window window;
 
 	private bool panel_mode = false;
-
-	// player ui
-	private uint tmr_status = 0;
 
 	public FilePreviewBox(Gtk.Window parent_window, bool _panel_mode){
 		//base(Gtk.Orientation.VERTICAL, 6); // issue with vala

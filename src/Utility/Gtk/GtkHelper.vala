@@ -804,6 +804,7 @@ namespace TeeJee.GtkHelper{
 	// utility ------------------
 
 	// add_notebook
+	/*
 	private Gtk.Notebook add_notebook(
 		Gtk.Box box, bool show_tabs = true, bool show_border = true){
 			
@@ -816,9 +817,10 @@ namespace TeeJee.GtkHelper{
 		box.pack_start(book, true, true, 0);
 		
 		return book;
-	}
+	}*/
 
 	// add_tab
+	/*
 	private Gtk.Box add_tab(
 		Gtk.Notebook book, string title, int margin = 12, int spacing = 6){
 			
@@ -831,9 +833,10 @@ namespace TeeJee.GtkHelper{
         book.append_page (vbox, label);
 
         return vbox;
-	}
+	}*/
 
 	// add_treeview
+	/*
 	private Gtk.TreeView add_treeview(Gtk.Box box,
 		Gtk.SelectionMode selection_mode = Gtk.SelectionMode.SINGLE){
 			
@@ -852,9 +855,10 @@ namespace TeeJee.GtkHelper{
 		box.add(scrollwin);
 
 		return treeview;
-	}
+	}*/
 
 	// add_column_text
+	/*
 	private Gtk.TreeViewColumn add_column_text(
 		Gtk.TreeView treeview, string title, out Gtk.CellRendererText cell){
 			
@@ -868,7 +872,7 @@ namespace TeeJee.GtkHelper{
 		treeview.append_column(col);
 		
 		return col;
-	}
+	}*/
 
 	// add_label
 	private Gtk.Label add_label(
@@ -913,6 +917,7 @@ namespace TeeJee.GtkHelper{
 	}
 	
 	// add_directory_chooser
+	/*
 	private Gtk.Entry add_directory_chooser(
 		Gtk.Box box, string selected_directory, Gtk.Window parent_window){
 			
@@ -954,6 +959,6 @@ namespace TeeJee.GtkHelper{
 		});
 
 		return entry;
-	}
+	}*/
 }
 

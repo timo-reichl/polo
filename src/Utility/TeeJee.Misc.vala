@@ -434,6 +434,7 @@ namespace TeeJee.Misc {
 		return random;
 	}
 
+	/*
 	private string pad_numbers_in_string(string input, int max_length = 3, char pad_char = '0'){
 			
 		string sequence = "";
@@ -473,7 +474,7 @@ namespace TeeJee.Misc {
 		}
 					
 		return output;
-	}
+	}*/
 
 	public bool is_numeric(string text){
 		for (int i = 0; i < text.length; i++){

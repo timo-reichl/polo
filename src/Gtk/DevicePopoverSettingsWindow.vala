@@ -259,7 +259,7 @@ public class DevicePopoverSettingsWindow : Gtk.Window {
 				string rfile = path_combine(App.share_dir, "files/udisks2/udisks2-automount-disable.sh");
 				string cmd = "sh '%s'".printf(escape_single_quote(rfile));
 				string std_out, std_err;
-				int status = App.exec_admin(cmd, out std_out, out std_err);
+				(void)App.exec_admin(cmd, out std_out, out std_err);
 
 				if (!file_exists(rules_file)){
 					//chk.active = false;
@@ -270,7 +270,7 @@ public class DevicePopoverSettingsWindow : Gtk.Window {
 			string rfile = path_combine(App.share_dir, "files/udisks2/udisks2-automount-enable.sh");
 			string cmd = "sh '%s'".printf(escape_single_quote(rfile));
 			string std_out, std_err;
-			int status = App.exec_admin(cmd, out std_out, out std_err);
+			(void)App.exec_admin(cmd, out std_out, out std_err);
 
 			if (file_exists(rules_file)){
 				//chk.active = true;

@@ -44,7 +44,6 @@ public class CloudLoginWindow : Gtk.Window, IPaneActive {
 	private Gtk.Entry txt_name;
 	private Gtk.ComboBox cmb_type;
 	private Gtk.Label lbl_message;
-	private TermBox terminal;
 	private Gtk.Box box_name;
 	private Gtk.Box box_type;
 	

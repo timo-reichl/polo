@@ -145,6 +145,7 @@ public class DonationWindow : Gtk.Window {
 		this.show_all();
 	}
 
+	/*
 	private void add_heading(string msg){
 		
 		var label = new Gtk.Label("<span weight=\"bold\" size=\"large\" style=\"italic\">%s</span>".printf(msg));
@@ -158,7 +159,7 @@ public class DonationWindow : Gtk.Window {
 		label.xalign = 0.0f;
 		label.margin_top = 12;
 		vbox_main.add(label);
-	}
+	}*/
 	
 	private string format_heading(string msg){
 
@@ -204,6 +205,7 @@ public class DonationWindow : Gtk.Window {
 		});
 	}
 
+	/*
 	private void add_link_button(Gtk.Box box, string text, string url){
 
 		var button = new Gtk.LinkButton.with_label("", text);
@@ -213,6 +215,6 @@ public class DonationWindow : Gtk.Window {
 		button.clicked.connect(() => {
 			xdg_open(url, username);
 		});
-	}
+	}*/
 }
 

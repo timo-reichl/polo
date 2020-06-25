@@ -43,8 +43,6 @@ public class ProgressPanelArchiveTask : ProgressPanel {
 	// ui for archive_task
 	private Gtk.Spinner spinner;
 	private Gtk.Label lbl_header;
-	private Gtk.Box hbox_bar;
-	private Gtk.DrawingArea drawing_area;
 	private Gtk.Label lbl_file_count_value;
 	private Gtk.Label lbl_data_value;
 	private Gtk.Label lbl_processed_value;
