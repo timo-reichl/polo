@@ -155,11 +155,9 @@ namespace TeeJee.GtkHelper{
 		content.margin = 6;
 		
 		//add buttons
-		var actions = (Box) dlg.get_action_area ();
 		dlg.add_button(_("OK"),Gtk.ResponseType.OK);
 		dlg.add_button(_("Cancel"),Gtk.ResponseType.CANCEL);
-		//actions.margin = 6;
-		actions.margin_top = 12;
+		dlg.set_margin_top(12);
 		
 		//keyboard shortcuts
 		txt_input.key_press_event.connect ((w, event) => {

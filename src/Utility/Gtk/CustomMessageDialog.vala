@@ -161,9 +161,7 @@ public class CustomMessageDialog : Gtk.Dialog {
 		hbox_contents.add(sw_msg);
 
 		// actions -------------------------
-		
-		var action_area = get_action_area () as Gtk.Box;
-		action_area.margin_top = 12;
+		set_margin_top(12);
 
 		switch(buttons_type){
 		case Gtk.ButtonsType.OK:

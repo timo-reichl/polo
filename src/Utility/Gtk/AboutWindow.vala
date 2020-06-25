@@ -308,23 +308,13 @@ public class AboutWindow : Dialog {
 	}
 
 	private void add_action_buttons(){
-		
-		hbox_action = (Box) get_action_area();
 
 		//btn_license
 		btn_license = new Gtk.Button.with_label("  " + _("License"));
 		btn_license.image = IconManager.lookup_image("help-about-symbolic", 16);
-		hbox_action.add(btn_license);
-
-		//btn_credits
-		btn_credits = new Gtk.Button.with_label("  " + _("Credits"));
-		btn_credits.image = IconManager.lookup_image("help-about-symbolic", 16);
-		hbox_action.add(btn_credits);
-
-		// handlers
 		
-        btn_license.clicked.connect(()=>{
-			
+        int btn_license_response_id = (int)btn_license.clicked.connect(()=>{
+
 			vbox_logo.visible = !vbox_logo.visible;
 
 			vbox_license.visible = !vbox_license.visible;
@@ -355,7 +345,13 @@ public class AboutWindow : Dialog {
 			}
 		});
 
-        btn_credits.clicked.connect(()=>{
+		add_action_widget(btn_license, btn_license_response_id);
+
+		//btn_credits
+		btn_credits = new Gtk.Button.with_label("  " + _("Credits"));
+		btn_credits.image = IconManager.lookup_image("help-about-symbolic", 16);
+
+        int btn_credits_response_id = (int)btn_credits.clicked.connect(()=>{
 			
 			vbox_logo.visible = !vbox_logo.visible;
 
@@ -385,6 +381,8 @@ public class AboutWindow : Dialog {
 			}
 		});
 
+		add_action_widget(btn_credits, btn_credits_response_id);
+
 
 		if (AppVersion == AppWikiVersion){
 			// changelog
@@ -397,11 +395,11 @@ public class AboutWindow : Dialog {
 		}
 
 		// close
-		var button = new Gtk.Button.with_label("  " + _("Close"));
-		button.image = IconManager.lookup_image("window-close", 16);
-		hbox_action.add(button);
+		var btn_close = new Gtk.Button.with_label("  " + _("Close"));
+		btn_close.image = IconManager.lookup_image("window-close", 16);
 
-		button.clicked.connect(()=>{ this.destroy(); });
+		int btn_close_response_id = (int)btn_close.clicked.connect(()=>{ this.destroy(); });
+		add_action_widget(btn_close, btn_close_response_id);
 	}
 
 	public void initialize() {
