@@ -48,7 +48,7 @@ public const int PLUGIN_VER_IMAGE  = 18080;
 public const int PLUGIN_VER_YT     = 18080;
 public const int PLUGIN_VER_CLAMAV = 18080;
 
-const string GETTEXT_PACKAGE = "";
+[CCode(cname="GETTEXT_PACKAGE")] extern const string GETTEXT_PACKAGE;
 const string LOCALE_DIR = "/usr/share/locale";
 
 public class Main : GLib.Object {
