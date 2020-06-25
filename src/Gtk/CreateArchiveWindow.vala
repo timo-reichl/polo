@@ -410,7 +410,7 @@ public class CreateArchiveWindow : Gtk.Dialog {
 		//txt_archive_location
 		var txt = new Gtk.Entry();
 		txt.hexpand = true;
-		txt.secondary_icon_stock = "folder-open";
+		//txt.secondary_icon_stock = "folder-open";
 		hbox.add(txt);
 		txt_archive_location = txt;
 

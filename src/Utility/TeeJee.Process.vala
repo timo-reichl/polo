@@ -327,7 +327,7 @@ namespace TeeJee.ProcessHelper{
 						string line;
 						string text = "";
 						size_t length;
-						while((line = dis.read_until ("\0", out length)) != null){
+						while((line = dis.read_upto ("\0", 1, out length)) != null){
 							text += " " + line;
 						}
 

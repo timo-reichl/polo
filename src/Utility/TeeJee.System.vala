@@ -335,11 +335,13 @@ namespace TeeJee.System{
 	}
 
 	public int get_display_width(){
-		return Gdk.Screen.get_default().get_width();
+		Gdk.Monitor monitor = Gdk.Screen.get_default().get_display().get_primary_monitor();
+		return monitor.workarea.width;
 	}
 
 	public int get_display_height(){
-		return Gdk.Screen.get_default().get_height();
+		Gdk.Monitor monitor = Gdk.Screen.get_default().get_display().get_primary_monitor();
+		return monitor.workarea.height;
 	}
 	
 	// internet helpers ----------------------

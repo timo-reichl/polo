@@ -134,7 +134,7 @@ public class DevicePopover : Gtk.Popover {
 		treeview.headers_clickable = false;
 		treeview.rubber_banding = false;
 		treeview.enable_search = false;
-		treeview.set_rules_hint(false);
+		//treeview.set_rules_hint(false);
 		treeview.activate_on_single_click = true;
 		treeview.expand = true;
 

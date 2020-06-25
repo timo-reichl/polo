@@ -235,7 +235,7 @@ public class FileViewList : Gtk.Box, IFileViewList {
 		treeview.rubber_banding = true;
 		treeview.has_tooltip = true;
 		treeview.enable_search = true;
-		treeview.set_rules_hint(true);
+		//treeview.set_rules_hint(true);
 		//treeview.activate_on_single_click = true;
 
 		// scrolled
