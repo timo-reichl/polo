@@ -556,7 +556,7 @@ namespace TeeJee.ProcessHelper{
 		if (process_pid < 1){ return; }
 
 		int[] child_pids = get_process_children(process_pid);
-		Posix.kill(process_pid, Posix.SIGTERM);
+		Posix.kill(process_pid, Posix.Signal.TERM);
 		log_debug("SIGTERM: pid=%d".printf(process_pid));
 		
 		if (killChildren){
@@ -564,7 +564,7 @@ namespace TeeJee.ProcessHelper{
 			foreach (long pid in child_pids){
 				childPid = (Pid) pid;
 				if (childPid > 1){
-					Posix.kill(childPid, Posix.SIGTERM);
+					Posix.kill(childPid, Posix.Signal.TERM);
 					log_debug("SIGTERM: pid=%d".printf(childPid));
 				}
 			}
@@ -581,7 +581,7 @@ namespace TeeJee.ProcessHelper{
 		if (process_pid < 1){ return; }
 		
 		int[] child_pids = get_process_children (process_pid);
-		Posix.kill (process_pid, Posix.SIGKILL);
+		Posix.kill (process_pid, Posix.Signal.KILL);
 		log_debug("SIGKILL: pid=%d".printf(process_pid));
 		
 		if (killChildren){
@@ -589,7 +589,7 @@ namespace TeeJee.ProcessHelper{
 			foreach (long pid in child_pids){
 				childPid = (Pid) pid;
 				if (childPid > 1){
-					Posix.kill (childPid, Posix.SIGKILL);
+					Posix.kill (childPid, Posix.Signal.KILL);
 					log_debug("SIGKILL: pid=%d".printf(childPid));
 				}
 			}
