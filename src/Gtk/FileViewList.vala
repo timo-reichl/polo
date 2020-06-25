@@ -2612,7 +2612,7 @@ public class FileViewList : Gtk.Box, IFileViewList {
 		try {
 			//log_debug("FileViewList: query_items(): create thread");
 			query_items_thread_running = true;
-			new Thread<void> ("FileViewList::query_items_thread", query_items_thread);
+			new Thread<void>.try ("FileViewList::query_items_thread", query_items_thread);
 		}
 		catch (Error e) {
 			log_error("FileViewList: query_items_thread()");
@@ -2728,7 +2728,7 @@ public class FileViewList : Gtk.Box, IFileViewList {
 			//log_debug("FileViewList: query_items(): create thread");
 			query_subfolders_thread_running = true;
 			query_subfolders_thread_cancelled = false;
-			new Thread<void> ("FileViewList::query_subfolders_thread", query_subfolders_thread);
+			new Thread<void>.try ("FileViewList::query_subfolders_thread", query_subfolders_thread);
 		}
 		catch (Error e) {
 			log_error("FileViewList: query_subfolders_thread()");
@@ -3447,7 +3447,7 @@ public class FileViewList : Gtk.Box, IFileViewList {
 
 		try {
 			//start thread for thumbnail updation
-			new Thread<void> ("FileViewList::thumbnail_updater_thread", thumbnail_updater_thread);
+			new Thread<void>.try ("FileViewList::thumbnail_updater_thread", thumbnail_updater_thread);
 		} catch (Error e) {
 			log_error ("FileViewList: run_thumbnail_updater()");
 			log_error (e.message);

@@ -227,14 +227,14 @@ public class Thumbnailer : GLib.Object {
 
 			log_msg("found thumb: %s".printf(thumb_path));
 
-			try {
+			//try {
 				var pixbuf = IconManager.load_pixbuf_from_file_at_scale(thumb_path, icon_size);
 				//log_debug("MTime: %s, URI: %s".printf(pixbuf.get_option("tEXt::Thumb::MTime"),pixbuf.get_option("tEXt::Thumb::URI")));
 				if (pixbuf != null){ return pixbuf; }
-			}
-			catch (Error e){
+			//}
+			//catch (Error e){
 				// ignore
-			}
+			//}
 		}
 
 		return null;
@@ -306,7 +306,7 @@ public class Thumbnailer : GLib.Object {
 
 		try {
 			//start thread for thumbnail generation
-			new Thread<void> ("Thumbnailer::thumbnail_generator_thread", thumbnail_generator_thread);
+			new Thread<void>.try ("Thumbnailer::thumbnail_generator_thread", thumbnail_generator_thread);
 		}
 		catch (Error e) {
 			log_error ("Thumbnailer: start_thumbnail_generator()");

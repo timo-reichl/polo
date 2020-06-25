@@ -64,12 +64,6 @@ public class GvfsTask : AsyncTask {
 		
 		regex_list = new Gee.HashMap<string, Regex>();
 		
-		try {
-			// none
-		}
-		catch (Error e) {
-			log_error (e.message);
-		}
 	}
 	
 	public void prepare() {

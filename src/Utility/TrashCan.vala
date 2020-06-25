@@ -69,8 +69,8 @@ public class TrashCan : FileItem {
 
 		try {
 			thread_running = true;
-			new Thread<void> ("TrashCan::query_items_thread", query_items_thread);
-		} catch (ThreadError e) {
+			new Thread<void>.try ("TrashCan::query_items_thread", query_items_thread);
+		} catch (Error e) {
 			thread_running = false;
 			log_error (e.message);
 		}

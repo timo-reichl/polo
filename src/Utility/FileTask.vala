@@ -250,14 +250,14 @@ public class FileTask : GLib.Object {
 			//start thread
 
 			if (first_pass){
-				new Thread<void> ("FileTask::check_conflicts_thread", check_conflicts_thread);
+				new Thread<void>.try ("FileTask::check_conflicts_thread", check_conflicts_thread);
 			}
 			else if ((source is FileItemCloud) || (destination is FileItemCloud)){
-				new Thread<void> ("FileTask::rclone_copy_thread", rclone_copy_thread);
+				new Thread<void>.try ("FileTask::rclone_copy_thread", rclone_copy_thread);
 			}
 			else {
 				//Thread.create<void> (rsync_copy_thread, true);
-				new Thread<void> ("FileTask::copy_items_thread", copy_items_thread);
+				new Thread<void>.try ("FileTask::copy_items_thread", copy_items_thread);
 			}
 			
 		} catch (Error e) {
@@ -913,7 +913,7 @@ public class FileTask : GLib.Object {
 
 		try {
 			//start thread for copy operation
-			new Thread<void> ("FileTask::restore_items_thread", restore_items_thread);
+			new Thread<void>.try ("FileTask::restore_items_thread", restore_items_thread);
 		} catch (Error e) {
 			log_error ("FileTask: restore_items_thread(): error");
 			log_error (e.message);
@@ -997,7 +997,7 @@ public class FileTask : GLib.Object {
 
 		try {
 			// start thread
-			new Thread<void> ("FileTask::empty_trash_thread", empty_trash_thread);
+			new Thread<void>.try ("FileTask::empty_trash_thread", empty_trash_thread);
 		}
 		catch (Error e) {
 			log_error ("FileTask: empty_trash_thread(): error");
@@ -1037,10 +1037,10 @@ public class FileTask : GLib.Object {
 		try {
 			//start thread for operation
 			if ((source is FileItemCloud) || (destination is FileItemCloud)){
-				new Thread<void> ("FileTask::rclone_delete_thread", rclone_delete_thread);
+				new Thread<void>.try ("FileTask::rclone_delete_thread", rclone_delete_thread);
 			}
 			else{
-				new Thread<void> ("FileTask::delete_items_thread", delete_items_thread);
+				new Thread<void>.try ("FileTask::delete_items_thread", delete_items_thread);
 			}
 			
 		} catch (Error e) {
@@ -1270,8 +1270,7 @@ public class FileTask : GLib.Object {
 
 		try {
 			//start thread
-			new Thread<void> ("FileTask::calculate_dirsize_async_thread", calculate_dirsize_async_thread);
-			//Thread<void*> thread = new Thread<void*>.try("", calculate_dirsize_async_thread);
+			new Thread<void>.try ("FileTask::calculate_dirsize_async_thread", calculate_dirsize_async_thread);
 		}
 		catch (Error e) {
 			log_error ("FileItem: calculate_dirsize_async(): error");

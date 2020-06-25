@@ -144,7 +144,7 @@ public class TouchFileDateContextMenu : Gtk.Menu {
 		
 		try {
 			task_is_running = true;
-			new Thread<void> ("TouchFileDateContextMenu::touch_file_item_thread", touch_file_item_thread);
+			new Thread<void>.try ("TouchFileDateContextMenu::touch_file_item_thread", touch_file_item_thread);
 		}
 		catch (Error e) {
 			log_error("TouchFileDateContextMenu: touch_file_item_thread()");

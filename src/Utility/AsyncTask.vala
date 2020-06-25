@@ -160,7 +160,7 @@ public abstract class AsyncTask : GLib.Object{
 
 			try {
 				//start thread for reading output stream
-				new Thread<void> ("AsyncTask::read_stdout", read_stdout);
+				new Thread<void>.try ("AsyncTask::read_stdout", read_stdout);
 			} catch (Error e) {
 				log_error ("AsyncTask.begin():create_thread:read_stdout()");
 				log_error (e.message);
@@ -168,7 +168,7 @@ public abstract class AsyncTask : GLib.Object{
 
 			try {
 				//start thread for reading error stream
-				new Thread<void> ("AsyncTask::read_stderr", read_stderr);
+				new Thread<void>.try ("AsyncTask::read_stderr", read_stderr);
 			} catch (Error e) {
 				log_error ("AsyncTask.begin():create_thread:read_stderr()");
 				log_error (e.message);

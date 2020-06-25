@@ -261,7 +261,7 @@ public class FileItemArchive : FileItem {
 
 		try {
 			//start thread
-			new Thread<void> ("FileItemArchive::query_children_async_thread", query_children_async_thread);
+			new Thread<void>.try ("FileItemArchive::query_children_async_thread", query_children_async_thread);
 		}
 		catch (Error e) {
 			log_error ("FileItemArchive: query_children_async(): error");

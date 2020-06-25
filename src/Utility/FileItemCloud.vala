@@ -375,7 +375,7 @@ public class FileItemCloud : FileItem {
 
 		try {
 			//start thread
-			new Thread<void> ("FileItemCloud::query_children_async_thread", query_children_async_thread);
+			new Thread<void>.try ("FileItemCloud::query_children_async_thread", query_children_async_thread);
 		}
 		catch (Error e) {
 			log_error ("FileItemCloud: query_children_async(): error");

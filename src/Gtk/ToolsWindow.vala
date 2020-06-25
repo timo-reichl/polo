@@ -127,16 +127,8 @@ public class ToolsWindow : Gtk.Dialog {
 		var store = new Gtk.ListStore (4, typeof (string), typeof (string), typeof (string), typeof(Gdk.Pixbuf));
 
 		//status icons
-		Gdk.Pixbuf pix_ok = null;
-		Gdk.Pixbuf pix_missing = null;
-
-		try{
-			pix_ok = IconManager.lookup("item-green", 16, false, true);
-			pix_missing  = IconManager.lookup("item-red", 16, false, true);
-		}
-        catch(Error e){
-	        log_error (e.message);
-	    }
+		Gdk.Pixbuf pix_ok = IconManager.lookup("item-green", 16, false, true);
+		Gdk.Pixbuf pix_missing = IconManager.lookup("item-red", 16, false, true);
 
 		TreeIter iter;
 		var list = new Gee.ArrayList<Tool>();
