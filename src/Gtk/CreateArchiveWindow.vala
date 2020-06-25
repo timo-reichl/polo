@@ -508,8 +508,8 @@ public class CreateArchiveWindow : Gtk.Dialog {
 			bool sensitive;
 			model.get (iter, 0, out txt, 1, out fmt, 2, out sensitive, -1);
 
-			(cell as Gtk.CellRendererText).text = txt;
-			(cell as Gtk.CellRendererText).sensitive = sensitive;
+			((Gtk.CellRendererText)cell).text = txt;
+			((Gtk.CellRendererText)cell).sensitive = sensitive;
 		});
 
 		combo.changed.connect(format_changed);

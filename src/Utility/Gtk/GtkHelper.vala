@@ -554,10 +554,10 @@ namespace TeeJee.GtkHelper{
 		bool odd_row, string odd_color = "#F4F6F7", string even_color = "#FFFFFF"){
 
 		if (cell is Gtk.CellRendererText){
-			(cell as Gtk.CellRendererText).background = odd_row ? odd_color : even_color;
+			((Gtk.CellRendererText)cell).background = odd_row ? odd_color : even_color;
 		}
 		else if (cell is Gtk.CellRendererPixbuf){
-			(cell as Gtk.CellRendererPixbuf).cell_background = odd_row ? odd_color : even_color;
+			((Gtk.CellRendererPixbuf)cell).cell_background = odd_row ? odd_color : even_color;
 		}
 	}
 

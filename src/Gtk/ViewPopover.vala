@@ -372,7 +372,7 @@ public class ViewPopover : Gtk.Popover, IPaneActive {
 		combo.set_cell_data_func (cell_text, (cell_text, cell, model, iter) => {
 			Gtk.TreeViewColumn col;
 			model.get (iter, 0, out col, -1);
-			(cell as Gtk.CellRendererText).text = (col.title.length > 0) ? col.title.replace("↓","").replace("↑","").strip() : _("Indicator");
+			((Gtk.CellRendererText)cell).text = (col.title.length > 0) ? col.title.replace("↓","").replace("↑","").strip() : _("Indicator");
 		});
 	}
 

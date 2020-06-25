@@ -356,7 +356,7 @@ public class FilePropertiesBox : Gtk.Box {
 		combo.set_cell_data_func (cell_text, (cell_text, cell, model, iter) => {
 			string user_login, user_name;
 			model.get (iter, 0, out user_login, 1, out user_name, -1);
-			(cell as Gtk.CellRendererText).text = user_login;// + ((user_name.length > 0) ? " - %s".printf(user_name) : "");
+			((Gtk.CellRendererText)cell).text = user_login;// + ((user_name.length > 0) ? " - %s".printf(user_name) : "");
 		});
 
 		// add items
@@ -415,7 +415,7 @@ public class FilePropertiesBox : Gtk.Box {
 		combo.set_cell_data_func (cell_text, (cell_text, cell, model, iter) => {
 			string group_name;
 			model.get (iter, 0, out group_name, -1);
-			(cell as Gtk.CellRendererText).text = group_name;
+			((Gtk.CellRendererText)cell).text = group_name;
 		});
 
 		// add items

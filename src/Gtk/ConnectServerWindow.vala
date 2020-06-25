@@ -239,7 +239,7 @@ public class ConnectServerWindow : Gtk.Window, IPaneActive {
 			string txt, val;
 			model.get (iter, 0, out txt, 1, out val, -1);
 
-			(cell as Gtk.CellRendererText).text = txt;
+			((Gtk.CellRendererText)cell).text = txt;
 		});
 
 		combo.notify["sensitive"].connect(()=>{

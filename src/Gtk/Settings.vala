@@ -1176,7 +1176,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		combo.set_cell_data_func (cell_text, (cell_text, cell, model, iter) => {
 			string text;
 			model.get (iter, 1, out text, -1);
-			(cell as Gtk.CellRendererText).text = text;
+			((Gtk.CellRendererText)cell).text = text;
 		});
 
 		// add items
@@ -1315,7 +1315,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		combo.set_cell_data_func (cell_text, (cell_text, cell, model, iter) => {
 			string text;
 			model.get (iter, 1, out text, -1);
-			(cell as Gtk.CellRendererText).text = text;
+			((Gtk.CellRendererText)cell).text = text;
 		});
 
 		// add items
@@ -1384,7 +1384,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		combo.set_cell_data_func (cell_text, (cell_text, cell, model, iter) => {
 			string text;
 			model.get (iter, 1, out text, -1);
-			(cell as Gtk.CellRendererText).text = text;
+			((Gtk.CellRendererText)cell).text = text;
 		});
 
 		// add items
@@ -1457,7 +1457,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		combo.set_cell_data_func (cell_text, (cell_text, cell, model, iter) => {
 			DesktopApp app;
 			model.get (iter, 0, out app, -1);
-			(cell as Gtk.CellRendererText).text = app.name;
+			((Gtk.CellRendererText)cell).text = app.name;
 		});
 
 		// model ----------------------
@@ -2443,7 +2443,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		combo.set_cell_data_func (cell_text, (cell_text, cell, model, iter) => {
 			string text;
 			model.get (iter, 0, out text, -1);
-			(cell as Gtk.CellRendererText).text = text;
+			((Gtk.CellRendererText)cell).text = text;
 		});
 
 		// add items
@@ -2495,7 +2495,7 @@ public class Settings : Gtk.Box, IPaneActive {
 		combo.set_cell_data_func (cell_text, (cell_text, cell, model, iter) => {
 			string text;
 			model.get (iter, 0, out text, -1);
-			(cell as Gtk.CellRendererText).text = text;
+			((Gtk.CellRendererText)cell).text = text;
 		});
 
 		// add items
