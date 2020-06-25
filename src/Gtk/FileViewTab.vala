@@ -336,12 +336,12 @@ public class FileViewTab : Gtk.Box {
 		});
 
 		menu_tab.show_all();
-		
+
 		if (event != null) {
-			menu_tab.popup (null, null, null, event.button, event.time);
+			menu_tab.popup_at_pointer(event);
 		}
 		else {
-			menu_tab.popup (null, null, null, 0, Gtk.get_current_event_time());
+			menu_tab.popup_at_pointer(null);
 		}
 
 		return true;

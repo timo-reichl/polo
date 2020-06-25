@@ -192,10 +192,10 @@ public class DiskFormatContextMenu : Gtk.Menu, IPaneActive {
 		this.device = _device;
 		
 		if (event != null) {
-			this.popup (null, null, null, event.button, event.time);
+			this.popup_at_pointer(event);
 		}
 		else {
-			this.popup (null, null, null, 0, Gtk.get_current_event_time());
+			this.popup_at_pointer(null);
 		}
 
 		return true;

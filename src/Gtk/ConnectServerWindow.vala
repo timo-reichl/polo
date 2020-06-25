@@ -634,14 +634,14 @@ public class ConnectServerWindow : Gtk.Window, IPaneActive {
 			}
 
 			menu_config.show_all();
-		
+
 			if (event != null) {
-				menu_config.popup (null, null, null, event.button, event.time);
+				menu_config.popup_at_pointer(event);
 			}
 			else {
-				menu_config.popup (null, null, null, 0, Gtk.get_current_event_time());
+				menu_config.popup_at_pointer(null);
 			}
-			
+
 			return true;
 		});
 	}

@@ -182,10 +182,10 @@ public class TouchFileDateContextMenu : Gtk.Menu {
 	public bool show_menu(Gdk.EventButton? event) {
 
 		if (event != null) {
-			this.popup (null, null, null, event.button, event.time);
+			this.popup_at_pointer(event);
 		}
 		else {
-			this.popup (null, null, null, 0, Gtk.get_current_event_time());
+			this.popup_at_pointer(null);
 		}
 
 		return true;
